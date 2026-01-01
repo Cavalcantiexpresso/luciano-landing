@@ -1,0 +1,21 @@
+.header {
+  background: var(--bg);
+  padding: 1rem 2rem;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  color: var(--accent);
+}
+ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+a {
+  color: var(--fg);
+  text-decoration: none;
+}
