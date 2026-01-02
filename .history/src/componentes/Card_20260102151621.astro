@@ -1,5 +1,7 @@
 ---
+
 import { Icon } from "astro-icon/components";
+
 
 interface Tech {
   name: string;
@@ -17,14 +19,12 @@ const { title, items } = Astro.props;
 <div class="card">
   <h3 class="card-title">{title}</h3>
   <ul class="card-list">
-    {
-      items.map((tech) => (
-        <li class="card-item">
-          <Icon name={tech.icon} size="24" class="card-icon" />
-          <span>{tech.name}</span>
-        </li>
-      ))
-    }
+    {items.map((tech) => (
+      <li class="card-item">
+        <Icon name={tech.icon} size="24" class="card-icon" />
+        <span>{tech.name}</span>
+      </li>
+    ))}
   </ul>
 </div>
 
