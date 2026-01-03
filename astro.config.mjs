@@ -4,7 +4,8 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://cavalcantiexpresso.github.io",
-  base: "/luciano-landing",
+  site: 'https://luciano-landing.vercel.app',
+
+
   integrations: [icon()],
 });
