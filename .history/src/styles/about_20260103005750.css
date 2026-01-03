@@ -14,7 +14,7 @@
   color: #666;
 }
 
-
+* Responsividade para telas menores */
 @media (max-width: 768px) {
   #sobre {
     padding: 1rem; 

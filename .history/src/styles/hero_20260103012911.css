@@ -38,7 +38,7 @@
   font-weight: 600;
   margin-left: 1rem; 
 }
-
+/* Responsividade */
 @media (max-width: 768px) {
   .btn,
   .btn-git {

@@ -38,25 +38,3 @@
   font-weight: 600;
   margin-left: 1rem; 
 }
-
-@media (max-width: 768px) {
-  .btn,
-  .btn-git {
-    display: block;       
-    width: 100%;           
-    margin: 0.5rem 0;      
-    text-align: center;    
-  }
-
-  .btn-git {
-    margin-left: 0;        
-  }
-}
-
-@media (max-width: 480px) {
-  .btn,
-  .btn-git {
-    font-size: 0.9rem;
-    padding: 0.6rem 1rem;  
-  }
-}
