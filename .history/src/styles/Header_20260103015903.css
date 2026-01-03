@@ -20,10 +20,10 @@ a {
   text-decoration: none;
 }
 
-
+/* Responsividade */
 @media (max-width: 768px) {
   nav {
-    flex-direction: column; 
+    flex-direction: column; /* empilha logo e menu */
     align-items: flex-start;
   }
 
