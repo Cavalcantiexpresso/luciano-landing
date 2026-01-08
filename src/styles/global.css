@@ -11,13 +11,11 @@ body {
   color: var(--fg);
 }
 
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem;
 }
-
 
 h1, h2, h3 {
   line-height: 1.2;
@@ -27,14 +25,39 @@ p {
   line-height: 1.6;
 }
 
+nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.profile-image {
+  width: 200px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 2rem;
+}
 
 @media (max-width: 768px) {
   body {
-    font-size: 0.95rem; 
+    font-size: 0.95rem;
   }
 
   .container {
     padding: 0.5rem;
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
 
   h1 {
@@ -51,6 +74,14 @@ p {
     font-size: 1rem;
     text-align: justify;
   }
+
+  .profile-image {
+    width: 150px;
+  }
+
+  .section {
+    padding: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -60,14 +91,25 @@ p {
 
   h1 {
     font-size: 1.5rem;
+    text-align: center;
   }
 
   h2 {
     font-size: 1.2rem;
+    text-align: center;
   }
 
   p {
     font-size: 0.95rem;
     line-height: 1.4;
+    text-align: justify;
+  }
+
+  .profile-image {
+    width: 120px;
+  }
+
+  .section {
+    padding: 0.5rem;
   }
 }
