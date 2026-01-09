@@ -1,0 +1,128 @@
+---
+import { Icon } from "astro-icon/components";
+
+const frontend = [
+  { name: "Angular", icon: "mdi:angular" },
+  { name: "React", icon: "mdi:react" },
+  { name: "TypeScript", icon: "mdi:language-typescript" },
+  { name: "JavaScript", icon: "mdi:language-javascript" },
+  { name: "HTML5", icon: "mdi:language-html5" },
+  { name: "CSS3 / SCSS", icon: "mdi:language-css3" }
+];
+
+const backend = [
+  { name: "Java", icon: "mdi:language-java" },
+  { name: "Node.js", icon: "mdi:nodejs" },
+  { name: "Express", icon: "mdi:server" },
+  { name: "Swagger (OpenAPI)", icon: "mdi:api" },
+  { name: "Maven", icon: "mdi:package-variant-closed" }
+];
+
+const database = [
+  { name: "SQL", icon: "mdi:database" },
+  { name: "MongoDB", icon: "mdi:leaf" }
+];
+
+const mobile = [
+   { name: "React Native", icon: "mdi:react" }
+];
+---
+
+<section class="tech-section" id="tecnologias">
+  <header class="tech-header">
+    <h2>Stack Tecnológica</h2>
+    <p>
+      Tecnologias utilizadas em projetos reais, ambientes corporativos
+      e sistemas de produção, com foco em qualidade, escalabilidade
+      e manutenibilidade.
+    </p>
+  </header>
+
+  {[
+    { title: "Frontend", items: frontend },
+    { title: "Backend", items: backend },
+    { title: "Banco de Dados", items: database },
+    { title: "Mobile & Híbrido", items: mobile }
+  ].map(section => (
+    <div class="tech-block">
+      <h3>{section.title}</h3>
+
+      <ul class="tech-list">
+        {section.items.map(tech => (
+          <li class="tech-item">
+            <Icon
+              name={tech.icon}
+              size="26"
+              class="tech-icon"
+              aria-hidden="true"
+            />
+            <span>{tech.name}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  ))}
+</section>
+
+<style>
+.tech-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+}
+
+.tech-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.tech-header h2 {
+  font-size: 2.2rem;
+}
+
+.tech-header p {
+  max-width: 780px;
+  margin: 1rem auto 0;
+  opacity: 0.85;
+}
+
+.tech-block {
+  margin-bottom: 3rem;
+}
+
+.tech-block h3 {
+  margin-bottom: 1.25rem;
+  font-size: 1.4rem;
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.tech-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #1e293b;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.tech-item:hover {
+  transform: translateY(-2px);
+  background: #273549;
+}
+
+.tech-icon {
+  color: currentColor;
+}
+
+.tech-item span {
+  font-size: 0.95rem;
+}
+</style>

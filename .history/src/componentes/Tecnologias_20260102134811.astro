@@ -1,0 +1,173 @@
+---
+import { Icon } from "astro-icon/components";
+
+/* =========================
+   STACK TECNOLÓGICA
+========================= */
+
+const frontend = [
+  { name: "Angular", icon: "mdi:angular" },
+  { name: "React", icon: "mdi:react" },
+  { name: "TypeScript", icon: "mdi:language-typescript" },
+  { name: "JavaScript", icon: "mdi:language-javascript" },
+  { name: "HTML5", icon: "mdi:language-html5" },
+  { name: "CSS3 / SCSS", icon: "mdi:language-css3" }
+];
+
+const backend = [
+  { name: "Java", icon: "mdi:language-java" },
+  { name: "Node.js", icon: "mdi:nodejs" },
+  { name: "Express", icon: "mdi:server" },
+  { name: "APIs REST", icon: "mdi:api" },
+  { name: "Swagger / OpenAPI", icon: "mdi:file-document-outline" },
+  { name: "Maven", icon: "mdi:package-variant-closed" }
+];
+
+const database = [
+  { name: "SQL", icon: "mdi:database" },
+  { name: "MongoDB", icon: "mdi:leaf" }
+];
+
+const mobile = [
+  { name: "Ionic", icon: "mdi:cellphone" },
+  { name: "Capacitor", icon: "mdi:chip" },
+  { name: "React Native", icon: "mdi:react" }
+];
+
+/* =========================
+   FERRAMENTAS & MÉTODOS
+========================= */
+
+const tools = [
+  { name: "Figma", icon: "mdi:figma" },
+  { name: "Git & GitHub", icon: "mdi:github" },
+  { name: "SCRUM", icon: "mdi:account-group" },
+  { name: "Kanban", icon: "mdi:view-kanban" },
+  { name: "TDD", icon: "mdi:test-tube" },
+  { name: "Pair Programming", icon: "mdi:account-multiple" }
+];
+
+/* =========================
+   SEGURANÇA
+========================= */
+
+const security = [
+  { name: "API Security Fundamentals", icon: "mdi:shield-lock" },
+  { name: "OWASP Top 10 (Web & API)", icon: "mdi:alert-octagon" },
+  { name: "JWT & Auth Tokens", icon: "mdi:key-variant" },
+  { name: "Segurança em APIs REST", icon: "mdi:api" },
+  { name: "Validação e Controle de Acesso", icon: "mdi:shield-check" },
+  { name: "OpenAPI Security", icon: "mdi:file-lock" }
+];
+
+/* =========================
+   SEÇÕES
+========================= */
+
+const sections = [
+  { title: "Frontend", items: frontend },
+  { title: "Backend", items: backend },
+  { title: "Banco de Dados", items: database },
+  { title: "Mobile & Aplicações Híbridas", items: mobile },
+  { title: "Ferramentas & Metodologias", items: tools },
+  { title: "Segurança", items: security }
+];
+---
+
+<section class="tech-section" id="tecnologias">
+  <header class="tech-header">
+    <h2>Stack Tecnológica</h2>
+    <p>
+      Tecnologias, ferramentas e práticas aplicadas ao longo de mais de 3 anos
+      de experiência profissional, atuando em sistemas corporativos,
+      ambientes críticos e projetos orientados a qualidade, performance
+      e segurança.
+    </p>
+  </header>
+
+  {sections.map(section => (
+    <div class="tech-block">
+      <h3>{section.title}</h3>
+
+      <ul class="tech-list">
+        {section.items.map(item => (
+          <li class="tech-item">
+            <Icon
+              name={item.icon}
+              size="26"
+              class="tech-icon"
+              aria-hidden="true"
+            />
+            <span>{item.name}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  ))}
+</section>
+
+<style>
+.tech-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 1rem;
+}
+
+.tech-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.tech-header h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.tech-header p {
+  max-width: 820px;
+  margin: 0 auto;
+  opacity: 0.85;
+  line-height: 1.6;
+}
+
+.tech-block {
+  margin-bottom: 3.5rem;
+}
+
+.tech-block h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tech-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #1e293b;
+  padding: 0.75rem 1.1rem;
+  border-radius: 10px;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.tech-item:hover {
+  transform: translateY(-2px);
+  background: #273549;
+}
+
+.tech-icon {
+  color: currentColor;
+}
+
+.tech-item span {
+  font-size: 0.95rem;
+}
+</style>

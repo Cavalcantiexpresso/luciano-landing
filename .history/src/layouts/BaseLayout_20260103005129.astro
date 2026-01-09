@@ -1,0 +1,21 @@
+---
+import { title } from "process";
+import Footer from "../componentes/Footer.astro";
+import Header from "../componentes/Header.astro";
+import "../styles/global.css";
+---
+
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+  </head><body>
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

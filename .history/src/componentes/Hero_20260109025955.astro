@@ -1,0 +1,29 @@
+---
+import "../styles/hero.css";
+
+import { Image } from "astro:assets";
+import minhaImagem from "../assets/images/luciano.jpg";
+---
+
+<section class="hero">
+  <Image src={minhaImagem} alt="Descrição" width={400} height={300} />
+
+  <div class="hero-text">
+    <h1>Luciano Cavalcanti</h1>
+    <p>Desenvolvedor de Front End | Angular | Node.js | Java</p>
+    <a
+      class="btn"
+      href="https://www.linkedin.com/in/lucianocavalcanti/"
+      target="_blank"
+    >
+      Meu LinkedIn
+    </a>
+    <a
+      class="btn-git"
+      href="https://github.com/Cavalcantiexpresso/"
+      target="_blank"
+    >
+      Meu GitHub
+    </a>
+  </div>
+</section>

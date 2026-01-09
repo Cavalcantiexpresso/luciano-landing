@@ -1,0 +1,54 @@
+ .sobre {
+    padding: 2rem;
+    background-color: #121212; /* fundo escuro */
+    color: #fff; /* texto branco */
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 2rem auto;
+    line-height: 1.6;
+    text-align: justify;
+  }
+
+  .sobre h2 {
+    color: #4da6ff; /* azul para destaque */
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+  }
+
+  .sobre p {
+    margin-bottom: 1rem;
+  }
+
+  @media (max-width: 768px) {
+  .sobre {
+    padding: 1.5rem;
+    margin: 1.5rem auto;
+    max-width: 95%; /* ocupa quase toda a tela */
+  }
+
+  .sobre h2 {
+    font-size: 1.5rem;
+    text-align: center; /* centraliza título em mobile */
+  }
+
+  .sobre p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 480px) {
+  .sobre {
+    padding: 1rem;
+    margin: 1rem auto;
+    border-radius: 6px;
+  }
+
+  .sobre h2 {
+    font-size: 1.2rem;
+  }
+
+  .sobre p {
+    font-size: 0.95rem;
+  }
+}

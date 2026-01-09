@@ -1,0 +1,103 @@
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #1c2744, #1a2238);
+  box-sizing: border-box;
+}
+
+.hero-img {
+  width: 180px;
+  height: 180px;
+  object-position: center top;
+  border-radius: 50%;
+  border: 4px solid var(--accent);
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.hero-text {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  color: #cbd5e1;
+  margin-bottom: 2rem;
+}
+
+.btn,
+.btn-git {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+  margin: 0.5rem 0.5rem;
+  text-align: center;
+}
+
+.btn {
+  background: var(--accent);
+}
+
+.btn-git {
+  background: #28a745;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 3rem 2rem;
+  }
+
+  .hero-img {
+    margin-bottom: 2rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .btn,
+  .btn-git {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 2rem 1.5rem;
+  }
+
+  .hero-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-text p {
+    font-size: 0.95rem;
+  }
+
+  .btn,
+  .btn-git {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+}

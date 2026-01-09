@@ -1,0 +1,147 @@
+:root {
+  --bg: #0f172a;
+  --fg: #ffffff;
+  --accent: #3b82f6;
+}
+
+.header {
+  background: var(--bg);
+  color: var(--fg);
+  padding: 1rem 1.5rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  color: var(--fg);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav ul li a:hover {
+  color: var(--accent);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.hero {
+  background: linear-gradient(to right, #1e293b, #334155);
+  width: 80%;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  color: var(--fg);
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #cbd5e1;
+  margin-bottom: 2rem;
+}
+
+.hero .buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.hero .buttons a {
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.hero .buttons a.linkedin {
+  background: #3b82f6;
+  color: #fff;
+}
+
+.hero .buttons a.github {
+  background: #22c55e;
+  color: #fff;
+}
+
+.hero .buttons a:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .logo {
+    text-align: center;
+  }
+
+  .hero {
+    padding: 2rem 2rem;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1rem;
+  }
+
+  nav ul li a {
+    font-size: 0.9rem;
+  }
+
+  .hero {
+    padding: 1.5rem 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 1.4rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+}

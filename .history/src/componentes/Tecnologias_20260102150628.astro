@@ -1,0 +1,61 @@
+---
+import Card from "./Card.astro";
+
+const frontend = [/* ... */];
+const backend = [/* ... */];
+const database = [/* ... */];
+const tools = [/* ... */];
+const mobile = [/* ... */];
+const security = [/* ... */];
+---
+
+<section class="tech-section" id="tecnologias">
+  <header class="tech-header">
+    <h2>Stack Tecnológica</h2>
+    <p>
+      Tecnologias utilizadas em projetos reais, ambientes corporativos e
+      sistemas de produção, com foco em qualidade, escalabilidade e
+      manutenibilidade.
+    </p>
+  </header>
+
+  <div class="card-grid">
+    <Card title="Frontend" items={frontend} />
+    <Card title="Backend" items={backend} />
+    <Card title="Banco de Dados" items={database} />
+    <Card title="Ferramentas & Metodologias" items={tools} />
+    <Card title="Mobile & Híbrido" items={mobile} />
+    <Card title="Security" items={security} />
+  </div>
+</section>
+
+<style>
+  .tech-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 1rem;
+  }
+
+  .tech-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .tech-header h2 {
+    font-size: 2.2rem;
+    color: #ffffff;
+  }
+
+  .tech-header p {
+    max-width: 780px;
+    margin: 1rem auto 0;
+    opacity: 0.85;
+    color: #cbd5e1;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+</style>

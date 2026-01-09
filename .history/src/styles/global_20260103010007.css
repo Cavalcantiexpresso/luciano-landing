@@ -1,0 +1,73 @@
+:root {
+  --bg: #0b0f1a;
+  --fg: #e7edf7;
+  --accent: #4f7cff;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+
+h1, h2, h3 {
+  line-height: 1.2;
+}
+
+p {
+  line-height: 1.6;
+}
+
+
+@media (max-width: 768px) {
+  body {
+    font-size: 0.95rem; 
+  }
+
+  .container {
+    padding: 0.5rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+}
